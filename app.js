@@ -113,13 +113,16 @@ const html = (Data) => {
             &nbsp;
             &nbsp;
             &nbsp;</h5></caption>
+            
             </div>
+            
             ${totalTable
                 .map(
                     (value, index) =>
                         `
-                    
-                    <table style="page-break-after:always" border="1" align="center" cellspacing="0">
+                        
+                        </br>
+                    <table style="page-break-after:always;page-break-inside:avoid" border="1" align="center" cellspacing="0">
             <thead>
         
                 <tr>
@@ -134,9 +137,10 @@ const html = (Data) => {
                     <th></th><th></th>
                     <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>
                     </th><th></th><th></th><th></th><th></th>
-                    <th></th><th></th><th></th><th></th>
+                    <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
                 </tr>
             </thead>
+          
             <tbody>
                 ${Data.splice(0, 18)
                     .map(
@@ -150,24 +154,28 @@ const html = (Data) => {
                             </td><td></td><td></td><td></td><td></td>
                             <td></td><td></td><td></td><td>
                             </td><td></td><td></td><td>
-                            </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                            </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
                         </tr>
                         `
                     )
                     .toString()
                     .split(",")
                     .join("")}
+                    
             </tbody>
-
         </table>
-        </br></br></br>
+        </br>
+        </div>   
         `
             ).toString()
             .split(",")
             .join("")
             }
            
-         
+            
+            
+            </body>
                     </html>
        `;
 };
